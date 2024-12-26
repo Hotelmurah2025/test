@@ -1,0 +1,121 @@
+{
+  "tours": [
+    {
+      "id": "tokyo-1",
+      "title": "Tokyo Highlights & Hidden Gems",
+      "description": "Discover the best of Tokyo in this comprehensive tour that takes you through both famous landmarks and local secrets.",
+      "price": 89,
+      "currency": "USD",
+      "duration": {
+        "hours": 8
+      },
+      "location": "Tokyo, Japan",
+      "city": "Tokyo",
+      "rating": 4.8,
+      "reviewCount": 245,
+      "imageUrl": "https://cdn.globaleur.com/whitelabel/photos/tokyo-1.jpg",
+      "highlights": [
+        "Visit the iconic Senso-ji Temple",
+        "Explore the modern Shibuya Crossing",
+        "Experience local street food at Tsukiji Outer Market",
+        "Discover hidden gardens and shrines"
+      ],
+      "included": [
+        "Professional local guide",
+        "Public transportation during tour",
+        "Lunch at local restaurant",
+        "Entrance fees to attractions"
+      ],
+      "itinerary": [
+        {
+          "day": 1,
+          "title": "Morning: Traditional Tokyo",
+          "description": "Start at Senso-ji Temple and explore Asakusa area"
+        },
+        {
+          "day": 1,
+          "title": "Afternoon: Modern Tokyo",
+          "description": "Visit Shibuya and experience contemporary culture"
+        }
+      ]
+    },
+    {
+      "id": "kyoto-1",
+      "title": "Kyoto Cultural Experience",
+      "description": "Immerse yourself in Japanese culture with this authentic Kyoto tour featuring temples, tea ceremonies, and traditional gardens.",
+      "price": 120,
+      "currency": "USD",
+      "duration": {
+        "days": 1
+      },
+      "location": "Kyoto, Japan",
+      "city": "Kyoto",
+      "rating": 4.9,
+      "reviewCount": 189,
+      "imageUrl": "https://cdn.globaleur.com/whitelabel/photos/kyoto-1.jpg",
+      "highlights": [
+        "Tea ceremony experience",
+        "Visit to Kinkaku-ji (Golden Pavilion)",
+        "Explore Arashiyama Bamboo Grove",
+        "Traditional Japanese lunch"
+      ],
+      "included": [
+        "Expert cultural guide",
+        "Tea ceremony materials",
+        "Traditional lunch",
+        "Temple entrance fees"
+      ],
+      "itinerary": [
+        {
+          "day": 1,
+          "title": "Morning: Temple Tour",
+          "description": "Visit the famous Golden Pavilion and nearby temples"
+        },
+        {
+          "day": 1,
+          "title": "Afternoon: Cultural Activities",
+          "description": "Participate in tea ceremony and visit bamboo grove"
+        }
+      ]
+    },
+    {
+      "id": "osaka-1",
+      "title": "Osaka Food & Culture Tour",
+      "description": "Experience the best of Osaka's famous food scene and vibrant culture in this exciting day tour.",
+      "price": 95,
+      "currency": "USD",
+      "duration": {
+        "hours": 6
+      },
+      "location": "Osaka, Japan",
+      "city": "Osaka",
+      "rating": 4.7,
+      "reviewCount": 167,
+      "imageUrl": "https://cdn.globaleur.com/whitelabel/photos/osaka-1.jpg",
+      "highlights": [
+        "Sample local street food in Dotonbori",
+        "Visit Osaka Castle",
+        "Explore Kuromon Market",
+        "Evening street food tour"
+      ],
+      "included": [
+        "Food-loving local guide",
+        "All food tastings",
+        "Castle entrance fee",
+        "Evening street food samples"
+      ],
+      "itinerary": [
+        {
+          "day": 1,
+          "title": "Morning: Historical Osaka",
+          "description": "Visit Osaka Castle and surrounding park"
+        },
+        {
+          "day": 1,
+          "title": "Afternoon: Food Adventure",
+          "description": "Explore markets and try local specialties"
+        }
+      ]
+    }
+  ]
+}

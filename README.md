@@ -1,50 +1,111 @@
-# React + TypeScript + Vite
+# Globaleur Website Clone
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern React-based clone of the Globaleur website, built with TypeScript, Tailwind CSS, and React Router. This project implements a comprehensive frontend solution with placeholder data and API functionality.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- 🎨 Modern UI components built with React and Tailwind CSS
+- 🚦 Smooth page navigation using React Router
+- 📱 Fully responsive design for all device sizes
+- 🔄 Simulated API functionality with placeholder data
+- 🎯 Tour search and filtering capabilities
+- 🌍 City and destination browsing
+- 🔐 User authentication interface
 
-## Expanding the ESLint configuration
+## Getting Started
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+### Prerequisites
 
-- Configure the top-level `parserOptions` property like this:
+- Node.js (v16 or higher)
+- npm or yarn package manager
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+### Installation
+
+1. Clone the repository:
+```bash
+git clone [repository-url]
+cd globaleur-clone
 ```
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+2. Install dependencies:
+```bash
+npm install
+# or
+yarn install
+```
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+3. Start the development server:
+```bash
+npm run dev
+# or
+yarn dev
+```
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
+The application will be available at `http://localhost:5173`
+
+## Project Structure
+
+```
+src/
+├── components/          # Reusable UI components
+│   ├── auth/           # Authentication related components
+│   ├── layout/         # Layout components (Header, Footer)
+│   └── ui/            # Common UI elements
+├── pages/              # Individual page components
+│   ├── Home.tsx
+│   ├── Tours.tsx
+│   ├── TourDetail.tsx
+│   └── FAQ.tsx
+├── styles/             # Global styles and Tailwind configuration
+├── utils/              # Utility functions and API simulation
+├── types/              # TypeScript type definitions
+└── data/              # Placeholder JSON data
+```
+
+## Available Scripts
+
+- `npm run dev` - Start development server
+- `npm run build` - Build for production
+- `npm run preview` - Preview production build
+- `npm run lint` - Run ESLint
+- `npm run type-check` - Run TypeScript type checking
+
+## Development Guidelines
+
+### Component Structure
+- Use functional components with TypeScript
+- Implement proper prop typing
+- Follow the container/presentational pattern
+- Keep components focused and reusable
+
+### Styling
+- Use Tailwind CSS utility classes
+- Follow mobile-first responsive design
+- Maintain consistent spacing and typography
+- Use the provided color palette and design tokens
+
+### API Integration
+The project includes a simulated API layer (`src/utils/api.ts`) with the following features:
+- Tour and city data fetching
+- Search and filtering functionality
+- Simulated network delays
+- Type-safe responses
+
+### Adding New Features
+1. Create new components in appropriate directories
+2. Update TypeScript interfaces as needed
+3. Add new API endpoints in api.ts if required
+4. Update routing configuration in App.tsx
+5. Follow existing patterns for state management
+
+## Contributing
+
+1. Create a new branch for your feature
+2. Make your changes
+3. Submit a pull request with a clear description
+4. Ensure all tests pass and types are correct
+
+## License
+
+This project is licensed under the MIT License - see the LICENSE file for details.
 ```

@@ -1,0 +1,28 @@
+{
+  "cities": [
+    {
+      "id": "tokyo",
+      "name": "Tokyo",
+      "country": "Japan",
+      "description": "Experience the perfect blend of traditional culture and modern innovation in Japan's bustling capital.",
+      "imageUrl": "https://cdn.globaleur.com/whitelabel/photos/destination-1.jpg",
+      "popularTours": 15
+    },
+    {
+      "id": "kyoto",
+      "name": "Kyoto",
+      "country": "Japan",
+      "description": "Discover ancient temples, traditional gardens, and authentic Japanese culture in the former imperial capital.",
+      "imageUrl": "https://cdn.globaleur.com/whitelabel/photos/destination-2.jpg",
+      "popularTours": 12
+    },
+    {
+      "id": "osaka",
+      "name": "Osaka",
+      "country": "Japan",
+      "description": "Known as Japan's kitchen, Osaka offers amazing food experiences and vibrant urban culture.",
+      "imageUrl": "https://cdn.globaleur.com/whitelabel/photos/destination-3.jpg",
+      "popularTours": 8
+    }
+  ]
+}
