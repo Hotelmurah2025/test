@@ -3,6 +3,11 @@
 @tailwind utilities;
 
 @layer base {
+  :root {
+    --primary: #f15b41;
+    --primary-hover: #d64e36;
+  }
+
   body {
     @apply text-gray-900 bg-white;
   }
@@ -12,4 +17,28 @@
   .container {
     @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
   }
+
+  .bg-primary {
+    background-color: var(--primary);
+  }
+
+  .hover\:bg-primary-hover:hover {
+    background-color: var(--primary-hover);
+  }
+}
+
+/* Calendar Styles */
+.rdp {
+  --rdp-cell-size: 40px;
+  --rdp-accent-color: var(--primary);
+  --rdp-background-color: #e5e7eb;
+  margin: 1em;
+}
+
+.rdp-day_selected:not([disabled]) { 
+  background-color: var(--primary) !important;
+}
+
+.rdp-day_selected:hover:not([disabled]) {
+  background-color: var(--primary-hover) !important;
 }

@@ -1,6 +1,6 @@
-import React from "react";
 import { Button } from "@/components/ui/button";
-import { cn } from "@/lib/utils";
+import { MapPin, Clock, Star } from "lucide-react";
+import { Link } from "react-router-dom";
 
 interface TourCardProps {
   id: string;
@@ -10,51 +10,71 @@ interface TourCardProps {
   duration: string;
   location: string;
   rating: number;
+  reviewCount?: number;
 }
 
-const TourCard = ({ id, title, image, price, duration, location, rating }: TourCardProps) => {
+const TourCard = ({ 
+  id, 
+  title, 
+  image, 
+  price, 
+  duration, 
+  location, 
+  rating,
+  reviewCount = 0 
+}: TourCardProps) => {
   return (
-    <div className="bg-white rounded-lg shadow-md overflow-hidden">
-      <div className="relative h-48">
-        <img 
-          src={image} 
-          alt={title}
-          className="w-full h-full object-cover"
-        />
-        <div className="absolute top-4 right-4 bg-white px-2 py-1 rounded-full text-sm font-medium">
-          ⭐ {rating}
+    <Link 
+      to={`/tours/${id}`} 
+      className="group block bg-white rounded-lg shadow-md overflow-hidden transition-transform hover:-translate-y-1 hover:shadow-lg"
+    >
+      <div className="relative">
+        <div className="aspect-w-16 aspect-h-9">
+          <img 
+            src={image} 
+            alt={title}
+            className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+          />
+        </div>
+        <div className="absolute top-4 right-4 bg-white px-3 py-1.5 rounded-full text-sm font-medium flex items-center gap-1">
+          <Star className="h-4 w-4 text-yellow-400 fill-current" />
+          <span>{rating.toFixed(1)}</span>
+        </div>
+        <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/60 to-transparent p-4">
+          <h3 className="text-white font-semibold text-lg mb-2 line-clamp-2">{title}</h3>
+          <div className="flex items-center gap-4">
+            <div className="flex items-center text-white/90">
+              <MapPin className="h-4 w-4 mr-1" />
+              <span className="text-sm">{location}</span>
+            </div>
+            <div className="flex items-center text-white/90">
+              <Clock className="h-4 w-4 mr-1" />
+              <span className="text-sm">{duration}</span>
+            </div>
+          </div>
         </div>
       </div>
       
       <div className="p-4">
-        <h3 className="font-semibold text-lg mb-2 line-clamp-2">{title}</h3>
-        
-        <div className="flex items-center text-gray-600 mb-2">
-          <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
-          </svg>
-          <span className="text-sm">{location}</span>
-        </div>
-        
-        <div className="flex items-center text-gray-600 mb-4">
-          <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
-          </svg>
-          <span className="text-sm">{duration}</span>
-        </div>
-        
         <div className="flex items-center justify-between">
-          <div className="text-lg font-bold">
-            ${price}
-            <span className="text-sm font-normal text-gray-600">/person</span>
+          <div>
+            <span className="text-sm text-gray-600">From</span>
+            <div className="text-lg font-bold text-primary">
+              ${price}
+              <span className="text-sm font-normal text-gray-600 ml-1">/person</span>
+            </div>
           </div>
-          <Button variant="default" asChild>
-            <a href={`/tours/${id}`}>View Details</a>
+          <Button variant="outline" size="sm" className="group-hover:bg-primary group-hover:text-white">
+            View Details
           </Button>
         </div>
+        {reviewCount > 0 && (
+          <div className="mt-2 text-sm text-gray-600">
+            {reviewCount} reviews
+          </div>
+        )}
       </div>
-    </div>
+    </Link>
   );
 };
 
